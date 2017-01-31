@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 namespace ReceiptApplication {
     class Program {
         static void Main(string[] args) {
-
             // I wanted to play and make an array of the names instead of hard coding them.
             string[] names = new string[] { "Apple", "Orange",
             "Water Melon", "Banana", "Bread", "Lettuce"};
             //decimal subTotal = 0;
             //decimal total = 5;
-            //double tax = 0.065; 
-
+            //double tax = 0.065;
             // Creating an array of my objects
             GroceryItem[] items = new GroceryItem[6];
             // Initializing each element of the array to avoid null exception being thrown.
@@ -22,7 +20,6 @@ namespace ReceiptApplication {
                 items[i] = new GroceryItem();
             }
             // Title displayed to the user
-
             Console.WriteLine("");
             Console.WriteLine("DSC Super Market");
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -34,8 +31,6 @@ namespace ReceiptApplication {
                 items[i].cost = Convert.ToDecimal(Console.ReadLine());
                 items[i].name = names[i];
             }
-
-
             // Gets the subtotal
             Receipt CustomerReceipt = SubTotal(items);
             // Gets total with tax
@@ -45,7 +40,6 @@ namespace ReceiptApplication {
             Console.WriteLine("                        SubTotal:   ${0}", String.Format("{0:0.00}", CustomerReceipt.subtotal));
             Console.WriteLine("                        Tax:        ${0}", String.Format("{0:0.00}", CustomerReceipt.tax));
             Console.WriteLine("                        Total:      ${0}", String.Format("{0:0.00}", CustomerReceipt.total));
-
             /*
             Console.WriteLine("               ${0}",
                 String.Format("{0:0.00}", subTotal));
@@ -87,7 +81,6 @@ namespace ReceiptApplication {
             */
             Console.ReadLine();            
         }
-
         public static Receipt SubTotal(GroceryItem[] items) {
             decimal subTotal = 0;
             foreach (GroceryItem item in items) {
@@ -97,7 +90,6 @@ namespace ReceiptApplication {
             customerReceipt.subtotal = subTotal;
             return customerReceipt;
         }
-
         public static Receipt tax(Receipt CustomerReceipt) {
             CustomerReceipt.tax = 0.065m;
             CustomerReceipt.total = CustomerReceipt.tax * CustomerReceipt.subtotal;
@@ -116,5 +108,4 @@ namespace ReceiptApplication {
         public decimal tax { get; set; }
         public decimal total { get; set; }
     }
-    
 }
