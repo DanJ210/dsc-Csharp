@@ -38,10 +38,12 @@ namespace ReceiptApplication {
 
             // Gets the subtotal
             Receipt CustomerReceipt = SubTotal(items);
+            // Gets total with tax
             CustomerReceipt = tax(CustomerReceipt);
+            // Displaying data to screen
             Console.WriteLine("                        ----------------");
             Console.WriteLine("                        SubTotal:   ${0}", String.Format("{0:0.00}", CustomerReceipt.subtotal));
-            Console.WriteLine("                        Tax:        ${0}", String.Format("{0:0.00}" ,CustomerReceipt.tax));
+            Console.WriteLine("                        Tax:        ${0}", String.Format("{0:0.00}", CustomerReceipt.tax));
             Console.WriteLine("                        Total:      ${0}", String.Format("{0:0.00}", CustomerReceipt.total));
 
             /*
@@ -83,9 +85,7 @@ namespace ReceiptApplication {
             Console.WriteLine("               ${0}",
                 String.Format("{0:0.00}", subTotal));
             */
-            Console.ReadLine();
-
-            
+            Console.ReadLine();            
         }
 
         public static Receipt SubTotal(GroceryItem[] items) {
@@ -104,8 +104,7 @@ namespace ReceiptApplication {
             return CustomerReceipt;
         }
     }
-    // Class that holds an array of grocery items. Basically an array of objects
-    // with an array of properties.
+    // Class that holds the grocery items.
     public class GroceryItem {
         public string name { get; set; }
         public decimal price { get; set; }
