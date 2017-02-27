@@ -10,12 +10,19 @@ namespace ReceiptApplication___Version_3 {
             string[,] items = new string[100, 4];
             int index1 = 0, index2 = 0, count = 0;
             string userInput;
+
+            // Boolean variable is used as the LCV for do/while loop.
             bool stop = false;
             do {
+                // index2 resets each iteration because it goes through each column of a single row.
                 index2 = 0;
+                // Gets name of item
                 Console.WriteLine("Enter Item Name: ");
                 userInput = Console.ReadLine();
+                // Checks user input for value other than 0.
                 if (userInput == "0") {
+                    // If user inputs 0 then LCV changes to true and continue keyword
+                    // takes program to evaluation of LCV. Else adds it to name
                     stop = true;
                     continue;
                 } else {
@@ -23,15 +30,16 @@ namespace ReceiptApplication___Version_3 {
                     index2++;
                 }
                 Console.WriteLine("Enter Price: ");
-                
                 items[index1, index2] = Console.ReadLine();
                 index2++;
+
                 Console.WriteLine("Enter Quantity: ");
-                
                 items[index1, index2] = Console.ReadLine();
                 index2++;
+
                 items[index1, index2] = Convert.ToString(calculate(items[index1, 1], items[index1, 2]));
                 index1++;
+
                 count++;
             } while (!stop);
 
