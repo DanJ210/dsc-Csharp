@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Daniel Jackson - Assignment 5 - Receipt Application_V3
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
