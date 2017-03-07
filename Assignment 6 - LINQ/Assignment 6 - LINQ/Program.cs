@@ -1,18 +1,20 @@
-﻿using System;
+﻿/// I wanted to practice by using a portable class library as a reference to bring the uppercase
+/// method given to us into this program. I can use that class library by adding it to any solution 
+/// in the future. My profressor told us to save the method so that's what I'm doing in a portable way.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// I made a seperate solution that could be a portable class library which saves the uppercase
-// method that my professor told me to save for use anywhere that I attach this library to.
-// I can copy the project folder to the class library to anywhere and reference it to use it over again.
+// This is including the class library that contains the uppercase words method.
 using DanielsClassLibrary;
 
 namespace Assignment_6___LINQ {
     class Program {
         static void Main(string[] args) {
+            // Standard list of strings
             List<string> items = new List<string>();
-
+            // Standard WriteLine/ReadLine to gather input for the list
             Console.Write("Please enter first name: ");
             items.Add(Console.ReadLine());
             Console.Write("Please enter last name: ");
@@ -25,15 +27,15 @@ namespace Assignment_6___LINQ {
             items.Add(Console.ReadLine());
             Console.Write("Please enter zip code: ");
             items.Add(Console.ReadLine());
-
+            Console.WriteLine("");
+            // Using LINQ to pass each item in a list to a method in a seperate class library referenced in the solution.
             var newList = from item in items
-                          let upperCaseWord = DanielsClassLibrary.UpperCaseFirstLetterOfWords.UppercaseWords(item)
+                          let upperCaseWord = UpperCaseFirstLetterOfWords.UppercaseWords(item)
                           select upperCaseWord;
             foreach (string item in newList) {
                 Console.WriteLine(item);
             }
         }
-        // Static method to uppercase the first letter of a word.
-        
+        // The static method is a referenced class library in this solution.
     }
 }
