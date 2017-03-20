@@ -87,12 +87,13 @@ namespace MultipleChoiceProject {
                 if ((score < 2) && (count < 2)) {
                     Console.Write("Would you like to try one more time? (Y/N): ");
                     tryAgain = Console.ReadLine();
-                    // If user enters uppercase or lowercase "N", round ends
+                    // If user enters uppercase or lowercase "N", sets LCV to false, round ends
                     if (tryAgain.ToUpper().Equals("N")) {
                         runAgain = false;
                     }
                     Console.WriteLine("");
                 }
+                // Sets LCV to false if score or count is 2 or more, round ends
                 else {
                     runAgain = false;
                 }
