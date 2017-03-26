@@ -28,7 +28,7 @@ namespace Assignment_7 {
         }
 
         public string studentName() {
-            return this.firstName + " " + this.lastName + " " + this.studentId;
+            return "Student Name: " + this.firstName + " " + this.lastName + ", " + this.studentId;
         }
     }
 }
