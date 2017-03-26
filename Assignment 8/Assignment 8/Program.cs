@@ -30,9 +30,10 @@ namespace Assignment_7 {
             Console.WriteLine();
 
             Console.WriteLine("Total students: {0}", Student.count);
-
+            // Simple foreach loops that calla a function of each object in the list.
+            // Each object has the function getStudent().
             foreach (var student in myList) {
-                Console.WriteLine(student.studentName());
+                Console.WriteLine(student.getStudent());
             }
             
         }
