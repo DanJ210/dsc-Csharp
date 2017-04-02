@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DaytonaStateLibrary\DaytonaStateLibrary.csproj">
+      <Project>{d9a84e46-0277-4162-b74f-fb10b5163eac}</Project>
+      <Name>DaytonaStateLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
