@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment 9 - Loan Application", "Assignment 9 - Loan Application\Assignment 9 - Loan Application.csproj", "{520FEA8E-F191-4150-9A08-BC0BA9737CA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceLib", "InterfaceLib\InterfaceLib.csproj", "{DA2418D4-62C8-4CAB-9152-4B5E09054E1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLib", "ClassLib\ClassLib.csproj", "{7C44B15E-F9D1-4606-AE91-AE8128192A47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{520FEA8E-F191-4150-9A08-BC0BA9737CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{520FEA8E-F191-4150-9A08-BC0BA9737CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{520FEA8E-F191-4150-9A08-BC0BA9737CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2418D4-62C8-4CAB-9152-4B5E09054E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2418D4-62C8-4CAB-9152-4B5E09054E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2418D4-62C8-4CAB-9152-4B5E09054E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2418D4-62C8-4CAB-9152-4B5E09054E1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C44B15E-F9D1-4606-AE91-AE8128192A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C44B15E-F9D1-4606-AE91-AE8128192A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C44B15E-F9D1-4606-AE91-AE8128192A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C44B15E-F9D1-4606-AE91-AE8128192A47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
