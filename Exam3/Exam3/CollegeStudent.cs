@@ -23,7 +23,7 @@ namespace Exam3 {
             return $"My name is {firstName}, " +
                 $"I am a college student. " +
                 $"I have a {ImportantThings()}, " +
-                $"I learn {Math()}.";
+                $"I learn {Math()}.\n";
         }
     }
 }
