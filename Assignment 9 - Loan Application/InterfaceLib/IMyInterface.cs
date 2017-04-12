@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InterfaceLib {
-    interface Interface1 {
-        public string iMessage() {
-            return;
-        }
+    public interface IMyInterface {
+        string iMessage();
     }
 }
