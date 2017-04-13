@@ -7,22 +7,57 @@ using System.Threading.Tasks;
 
 namespace Assignment_9___Loan_Application {
     class Program {
+        static double loanAmount;
+        static double years;
+        static double interestRate;
+        static bool done;
         static void Main(string[] args) {
-            double loanAmount;
-            double years;
-            double interestRate;
 
-            Console.WriteLine("Please enter loan amount: ");
-            loanAmount = Convert.ToDouble(Console.ReadLine());
+            do {
+                done = false;
+                try {
+                    Console.WriteLine("Please enter loan amount: ");
+                    loanAmount = Convert.ToDouble(Console.ReadLine());
+                    done = true;
+                }
+                catch (Exception ex) {
+                    Console.WriteLine($"\n{ex.Message}");
+                    Console.WriteLine("Please enter a double format.\n");
+                }
+            } while (!done);
 
-            Console.WriteLine("\nPlease enter years: ");
-            years = Convert.ToDouble(Console.ReadLine());
+            do {
+                done = false;
+                try {
+                    Console.WriteLine("\nPlease enter years: ");
+                    years = Convert.ToDouble(Console.ReadLine());
+                    done = true;
+                }
+                catch (Exception ex) {
+                    Console.WriteLine($"\n{ex.Message}");
+                    Console.WriteLine("Please enter a double format.\n");
+                }
+            } while (!done);
 
-            Console.WriteLine("\nPlease enter interest rate: ");
-            interestRate = Convert.ToDouble(Console.ReadLine());
+            do {
+                done = false;
+                try {
+                    Console.WriteLine("\nPlease enter interest rate: ");
+                    interestRate = Convert.ToDouble(Console.ReadLine());
+                    done = true;
+                }
+                catch (Exception ex) {
+                    Console.WriteLine($"\n{ex.Message}");
+                    Console.WriteLine("Please enter a double format.\n");
+                }
+            } while (!done);
+
+            
+
+            
 
             C1 generateInterest = new C1(loanAmount, years, interestRate);
-            Console.WriteLine($"Total interest rate: {generateInterest.PayInterests()}");
+            Console.WriteLine($"\nTotal interest rate: {generateInterest.PayInterests()}");
 
             Console.WriteLine(generateInterest.iMessage());
         }
