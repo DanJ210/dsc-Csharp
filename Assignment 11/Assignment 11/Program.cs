@@ -5,6 +5,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+/* Daniel Jackson - Assignment 11 */
+
 namespace Assignment_11 {
     class Program {
         static void Main(string[] args) {
@@ -29,7 +31,8 @@ namespace Assignment_11 {
                 //Console.WriteLine(namePattern.IsMatch(userName));
                 //Console.WriteLine(namePattern.Match(userName));
                 //done = namePattern.IsMatch(userName) ? true : false;
-            } while (done);
+                done = count > 2 ? true : false; // This statement is only meant to get past this part which doesn't work.
+            } while (!done);
 
             // The logic below does work but the above does not
             done = false;
@@ -41,6 +44,8 @@ namespace Assignment_11 {
                 done = numberPattern.IsMatch(cardNumber);
                 //Console.WriteLine(numberPattern.IsMatch(cardNumber));
             } while (!done);
+
+            Console.WriteLine("Thank you for your order");
         }
     }
 }
