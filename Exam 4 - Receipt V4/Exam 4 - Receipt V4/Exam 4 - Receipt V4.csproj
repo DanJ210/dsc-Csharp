@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E02E4697-567E-4A04-BB60-B2411EAD8E2A}</ProjectGuid>
+    <ProjectGuid>{25C5EC25-D249-4B12-BADE-D0CF0A90FC60}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GenerateQueue</RootNamespace>
-    <AssemblyName>GenerateQueue</AssemblyName>
+    <RootNamespace>Exam_4___Receipt_V4</RootNamespace>
+    <AssemblyName>Exam 4 - Receipt V4</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
