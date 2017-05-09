@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Final_Exam {
     class Course {
-        // Private Data Members
+        // Private Data Members - I wasn't exactly sure what I was doing
+        // with these data members. This may be in-correct.
         private string CID;
         private string CName;
 
